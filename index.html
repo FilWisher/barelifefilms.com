@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://filwisher.net/fonts/HelveticaNeue.ttf" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+}
+
+div#sections {
+    /*  
+    width: 150ex;
+    max-width: 1200px;
+    */
+    margin: auto;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: .35em;
+}
+
+h2 {
+    letter-spacing: .25em;
+}
+
+h3 {
+    letter-spacing: 0.15em;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue';
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+div.section:first-child div.header {
+    height: 100vh;
+}
+
+div.section {
+    min-height: 100vh;
+}
+
+div.section div.header h2 {
+    transform: translate(-50%, -30%);
+    font-size: 6em;
+    color: white;
+    text-align: center;
+}
+
+div.section h2 {
+}
+
+div.section h3, h4, p, ul, li {
+    line-height: 1.6em;
+}
+
+div.section div.header {
+    min-height: 100vh;
+    position: relative;
+}
+
+div.section div.content {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    width: 100ex;
+    max-width: 1200px;
+    margin: auto;
+}
+
+div.section#home div.header {
+    /* background: white url('bench.jpg') no-repeat center; */
+    background: white url('output.gif') no-repeat center;
+    background-size: 100% auto;
+}
+
+div.section#home div.content h3 {
+    font-family: Roboto, sans-serif;
+}
+
+div.section#how-to-watch div.header {
+    background: white url('doorstep.jpg') no-repeat center;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100vh;
+}
+
+div.section#about div.header {
+    background: white url('still.png') no-repeat center;
+    background-size: 100% auto;
+}
+
+div.section#action div.header {
+    background: white url('protest.jpg') no-repeat center;
+    background-size: 100% auto;
+}
+div.section#action a, a:visited {
+    color: blue;
+}
+
+div.section#contact div.header {
+    min-height: 30vh;
+}
+
+div.section#contact h2 {
+    color: black;
+}
+div.section#contact p {
+    text-align: left;
+}
+
+div.section div.header h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.left { float: left; }
+
+div#navigation {
+    position: fixed;
+    top: 0em;
+    padding-top: 1.5em;
+    padding-left: 3em;
+    height: 5em;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+}
+
+div.row {
+    display: flex;
+    flex-direction: row;
+}
+
+div.row div.col {
+    flex: 1;
+}
+
+div.row div.col img { max-width: 100%; }
+
+@media screen and (min-width: 800px) {
+    div.row div.col {
+        flex: 1;
+    }
+}
+
+div#navigation ul a {
+    text-decoration: none;
+    color: black;
+    padding: 4px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+div#navigation ul a:hover {
+    cursor: pointer;
+    color: #ccc;
+}
+
+div#navigation ul {
+    float: right;
+    list-style: none;
+}
+
+div#navigation ul li {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    border-left: 1px solid black;
+}
+
+div#screenings h3 {
+    padding-bottom: 0.5em;
+}
+
+div.screening {
+    padding-bottom: 1em;
+}
+
+div.screening h4 {
+    font-weight: 300;
+}
+
+div.screening {
+    font-weight: 300;
+}
+
+div.screening h4 a {
+    color: black;
+}
+
+div.section#about div.col#logo {
+    text-align: center;
+}
+
+div.section#about h3 {
+    text-decoration: underline;
+}
+
+div.section#about div.film ul {
+    padding: 1em;
+}
+
+div.section#contact {
+    min-height: 30em;
+    padding-bottom: 1em;
+}
+
+div.section#contact ul {
+    padding: none
+}
+
+
+div.section#contact ul a {
+    text-decoration: none;
+    color: black;
+    padding: 4px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+div.section#contact ul a:hover {
+    cursor: pointer;
+    color: #ccc;
+}
+
+div.section#contact {
+    text-align: center;
+}
+
+div.section#contact ul {
+    list-style: none;
+    display: inline-block;
+}
+
+div.section#contact ul li {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    border-left: 1px solid black;
+}
+
+div.section#contact ul li:first-child {
+    border-left: none;
+}
+
+div.section#contact img#logo {
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1.5em;
+}
+
+div.section#contact div#text {
+    margin-left: 10%;
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+</style>
+<title>Hello</title>
+</head>
+<body>
+<div id='navigation'>
+    <h1 class='left'>NHS Borderlands</h1>
+    <ul>
+        <li><a href="#home">HOME</a>
+        <li><a href="#how-to-watch">HOW TO WATCH</a>
+        <li><a href="#action">ACTION</a>
+        <li><a href="#contact">CONTACT</a>
+    </ul>
+</div>
+<div id='sections'>
+
+    <div class='section' id='home'>
+        <div class='header'>
+            <h2>NHS Borderlands</h2>
+        </div>
+        <div class='content'>
+            <h3>An investigative documentary into the human cost of charging migrants for accessing the NHS</h3>
+            <br>
+            <p>
+                After fleeing persecution in Zimbabwe in fear for her life, Angela sought
+                asylum in the UK where she has lived with her husband for 20 years. Following a
+                vital hysterectomy operation Angela is - without warning - issued a bill for
+                &#163;8,000 by the NHS, jeopardizing her life in the UK forever. Angela's story
+                exposes the real cost of the recent introduction of NHS charges for migrants,
+                where discrimination undermines our society's commitment to universal
+                healthcare. The most vulnerable are left unable to pay and scared to seek care.
+                There are many stories like Angela's, most untold and undocumented. This film
+                documents how healthcare workers and campaigners are fighting alongside Angela
+                to keep the border out of hospitals.
+        </div>
+    </div>
+
+    <div class='section' id='how-to-watch'>
+        <div class='header'>
+            <h2>How to Watch</h2>
+        </div>
+        <div class='content'>
+            <div class='row'>
+                <div class='col' id='screenings'>
+                    <h3>Past</h3>
+                    <div class='screening'>
+                        <h4><a href=''>Link to screening</a></h4>
+                        <p>Time of screening</p>
+                    </div>
+                    <div class='screening'>
+                        <h4><a href=''>Link to screening</a></h4>
+                        <p>Time of screening</p>
+                    </div>
+                    <div class='screening'>
+                        <h4><a href=''>Link to screening</a></h4>
+                        <p>Time of screening</p>
+                    </div>
+                </div>
+                <div class='col'>
+                    <h3>Upcoming</h3>
+                    <div class='screening'>
+                        <h4><a href=''>Link to screening</a></h4>
+                        <p>Time of screening</p>
+                    </div>
+                    <div class='screening'>
+                        <h4><a href=''>Link to screening</a></h4>
+                        <p>Time of screening</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='section' id='action'>
+        <div class='header'>
+            <h2>Action</h2>
+        </div>
+        <div class='content'>
+            <ul>
+                <li>
+                    <b><a href='http://www.docsnotcops.co.uk'>Docs Not Cops</a></b>
+                    <br>
+                    <br>
+                    <p>Docs Not Cops is a campaign group of NHS professionals and patients who believe health is a right and not a privilege. Join their campaign #patientsnotpassports</p>
+                    <br>
+                    <p><a href='http://www.patientsnotpassports.co.uk'>Docs Not Cops toolkit for advocacy and action: www.PatientsNotPassports.co.uk</a></p>
+                    <br>
+                </li>
+
+                <li>
+                    <b><a href='https://www.medact.org/'>Medact</a></b>
+                    <br>
+                    <br>
+                    <p>Medact is made up of a network of health workers to challenge the social, political and economic conditions which damage health and deepen health inequalities.</p>
+                    <br>
+                    <p>Support their work to document and challenge the ways in which the COVID-19 pandemic has highlighted and deepened serious health inequalities in the UK and across the world.</p>
+                    <br>
+                </li>
+
+                <li>
+                    <b><a href='https://www.doctorsoftheworld.org.uk/'>Doctors of the World</a></b>
+                    <br>
+                    <br>
+                    <p>Doctors of the World work internationally and the UK to provide healthcare to those who are otherwise excluded, striving towards the ideal that healthcare is acknowledged as a fundamental right.</p>
+                    <br>
+                    <p>Read their report on how COVID-19 has affected excluded groups in the UK and their recommendations to overcome these barriers.</p>
+                    <br>
+                </li>
+
+                <li>
+                    <b><a href='https://maternityaction.org.uk/'>Maternity Action</a></b>
+                    <br>
+                    <br>
+                    <p>Maternity Action is the UK's leading charity committed to ending inequality and improving the health and wellbeing of pregnant women, partners and young children.</p>
+                    <br>
+                </li>
+
+                <li>
+                    <b><a href='https://www.jcwi.org.uk/'>JCWI</a></b>
+                    <br>
+                    <br>
+                    <p>The Joint Council of Welfare of Immigrants (JCWI) is a charity that works to challenge policies that harm migrants in Britain and uphold and protect values of human rights and dignity. </p>
+                    <br>
+                    <p>The Home Office is putting lives in danger during the Coronavirus pandemic. Support their <a href='https://www.jcwi.org.uk/news/letter-to-sage-ensure-all-migrants-can-access-the-vaccine'>campaign</a> for a vaccine programme that works for everyone, regardless of immigrations status and to suspend NRPF visa conditions.</p>
+                    <br>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class='section' id='contact'>
+        <div class='header'>
+            <h2>Contact</h2>
+        </div>
+        <div class='content'>
+                <img src='barelifefilms.png' id='logo' />
+                <div id='text'>
+                    <p>Agnes Woolley, May Robson and Lily Wakeley are the makers of this film and together we are 'Bare Life Films'. After meeting at SOAS University and then working in migrant rights, we felt compelled to come together to respond to the government's recent 'hostile environment measures' and to document Angela's story through the medium of this film.</p>
+                    <br>
+                    <p>Too often headlines reduce migrants to a crisis of costs and numbers, rendering their humanity dispensable. This dangerously obscures the violent racism these policies espouse to those who do not experience it. Thank you for your support to amplify the story of Angela and others who are affected, which are many, nuanced and deserve to be heard in their entirety.</p>
+                    <br>
+                    <br>
+                </div>
+        </div>
+        <ul>
+            <li><a href="https://twitter.com/barelifefilms">TWITTER</a>
+            <li><a href="mailto:barelifefilms@gmail.com">EMAIL</a>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
