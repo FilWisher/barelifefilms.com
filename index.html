@@ -81,6 +81,13 @@ div.section {
     width: 100vw;
 }
 
+div.section#home div.header div#hr-logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 63%;
+}
+
 @media only screen and (max-width: 1000px) {
 
     body div.section div.content {
@@ -92,6 +99,9 @@ div.section {
         margin-top: 3em;
     }
 
+    div.section#home div.header div#hr-logo {
+        top: 67%;
+    }
 
     body div.section div.header h2 {
         font-size: 2em;
@@ -236,6 +246,7 @@ div.row {
 
 div.row div.col {
     flex: 1;
+    padding-right: 1em;
 }
 
 div.row div.col img { max-width: 100%; }
@@ -281,6 +292,7 @@ div.screening {
 
 div.screening h4 {
     font-weight: 300;
+    text-decoration: underline;
 }
 
 div.screening {
@@ -379,6 +391,9 @@ div.section#contact div#text {
     <div class='section' id='home'>
         <div class='header'>
             <h2>NHS Borderlands</h2>
+            <div id='hr-logo'>
+                <img src='./l.png' style='width: 15%'/>
+            </div>
         </div>
         <div class='content'>
             <h3>An investigative documentary into the human cost of charging migrants for accessing the NHS</h3>
@@ -403,29 +418,57 @@ div.section#contact div#text {
         </div>
         <div class='content'>
             <div class='row'>
-                    <!--
                 <div class='col' id='screenings'>
                     <h3>Past</h3>
                     <div class='screening'>
-                        <h4><a href=''>Link to screening</a></h4>
-                        <p>Time of screening</p>
+                        <h4>Advocacy, Activism and Inclusion in Healthcare module: screening</h4>
+                        <p>Brighton and Sussex Medical School, 20/10/22</p>
                     </div>
                     <div class='screening'>
-                        <h4><a href=''>Link to screening</a></h4>
-                        <p>Time of screening</p>
+                        <h4>Swansea Radical Community Festival: screening</h4>
+                        <p>Swansea, 15/10/22</p>
                     </div>
                     <div class='screening'>
-                        <h4><a href=''>Link to screening</a></h4>
-                        <p>Time of screening</p>
+                        <h4>Respiratory staff clinical meeting: screening</h4>
+                        <p>Kings College NHS, London, 19/06/2022</p>
                     </div>
+                    <div class='screening'>
+                        <h4>Sussex Defend our NHS: screening and panel discussion</h4>
+                        <p>Dorset Gardens Methodist Hall, Brighton, 14/06/22</p>
+                    </div>
+                    <div class='screening'>
+                        <h4>Waltham Forest Save our NHS: screening and panel discussion</h4>
+                        <p>Barnabas Church, London, 11/06/22 and 28/10/22</p>
+                    </div>
+                    <div class='screening'>
+                        <h4>Haringey Welcome: Screening and panel discussion</h4>
+                        <p>McQueens Theatre, London, 28/04/22</p>
+                    </div>
+                    <div class='screening'>
+                        <h4>Border Criminology Course: screening</h4>
+                        <p>Oxford Brookes, Oxford, 28/02/22</p>
+                    </div>
+                    <div class='screening'>
+                        <h4>Lambeth and Southwark Patients Not Passports: screening and panel discussion</h4>
+                        <p>Effra Space, London, 28/01/2022</p>
+                    </div>
+                    <div class='screening'>
+                        <h4>Human Rights Film Festival of Naples: Official Human Rights Short selection 2021</h4>
+                        <p>Italy, 10/11/2021</p>
+                    </div>
+                    <div class='screening'>
+                        <h4>Premier Screening and panel discussion</h4>
+                        <p>Whirled Cinema, London, 23/09/2021</p>
+                    </div>
+
                 </div>
-            -->
-                <div class='col'>
+                <div class='col' id='screenings'>
                     <h3>Upcoming</h3>
                     <div class='screening'>
                         <h4><a href='https://www.eventbrite.co.uk/e/nhs-borderlands-short-documentary-screening-panel-discussion-tickets-169361317259'>Premier Screening & Panel Discussion</a></h4>
                         <p>19.15, 23rd September @ Whirled Cinema.</p>
                     </div>
+
                     <!--
                     <div class='screening'>
                         <h4><a href=''>Link to screening</a></h4>
